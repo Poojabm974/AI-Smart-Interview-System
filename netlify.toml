@@ -1,0 +1,12 @@
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+[build.environment]
+  NODE_VERSION = "18"
+
+# Ensure SPA routes work (e.g., /interview, /results)
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
